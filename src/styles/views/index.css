@@ -49,7 +49,6 @@ body{
   position: absolute;
   width: 20%;
   z-index: 0;
-
 }
 
 .logo-menu-lateral{
@@ -58,13 +57,38 @@ body{
   height: 40%;
   margin-top: 10%;
   width: 90%;
+}
+.input-type {
+ width: 75%;
+ margin:2% 0  0 0%;
+/*
+  height: 58%*/;
+}
+.form-control-lg{
+ display: flex;
+  width: 67%;
+  flex-direction: column;
+  align-items: center;
 
 }
 #logo-lateral{
-  margin: auto 0;
   display: flex;
+  margin: 5% 0 2% 0;
   align-items: center;
   flex-direction: column;
+}
+.btn{
+  margin-top: 2%;
+  width: 30%;
+  background: url("~@/assets/images/boton.png") no-repeat;
+  border: none !important;
+  color: #000000 !important;
+
+}
+.btn:active,
+.btn:focus
+{
+  border:none; /* here configure as your needs */
 }
 
 #separator{
@@ -72,10 +96,10 @@ body{
   height: 8px !important;
   margin: 25px auto 20px 25px;
   width: 90%;
+
 }
 
 .content-component{
-  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,11 +115,12 @@ body{
 .content{
   background-color: rgba(0, 0, 0, 0.6);
   border: 2px solid red;
-  height: 90%;
+  height: 100%;
   min-width: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+
 
 
 }

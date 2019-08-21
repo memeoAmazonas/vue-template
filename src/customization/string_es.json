@@ -4,9 +4,13 @@
   "home": "INICIO",
   "title": "title name",
   "register": "REGISTRO",
+  "sendtBtc":"ENVIAR BTC",
+  "sendDash":"ENVIAR DASH",
+  "loginLabel": "Iniciar Sesión",
   "withdrawBtc": "RETIRAR BTC",
   "withdrawDash": "RETIRAR DASH",
   "transactions": "TRANSACCIONES",
-  "sendtBtc":"ENVIAR BTC",
-  "sendDash":"ENVIAR DASH"
+  "email": "Correo Electronico",
+  "password": "Contraseña"
+
 }
