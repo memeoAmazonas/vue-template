@@ -1,0 +1,135 @@
+html{
+  background-color: transparent !important;
+  min-height: 100%;
+;
+}
+
+body{
+  background: url('~@/assets/images/fondo.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100% !important;
+
+
+}
+.label-component{
+  background-color: #7b6e47;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #6c757d;
+  color: #ffffff;
+  padding: 8px;
+  display: block;
+  width: 25%;
+  text-shadow: 0 0 50px #ffa;
+}
+
+.label-component-menu-lateral{
+  background-color: #7b7232;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 0 0 10px 0 #6c757d;
+  color: #ffffff;
+  display: block;
+  padding: 4px;
+  text-align: center;
+  text-shadow: 0 0 50px #ffa;
+  width: 100%;
+}
+
+.space-between{
+  background-color: transparent !important;
+  margin-top: 20px;
+}
+
+.menu-lateral{
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  height: 100% !important;
+  position: absolute;
+  width: 20%;
+  z-index: 0;
+
+}
+
+.logo-menu-lateral{
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  margin-top: 10%;
+  width: 90%;
+
+}
+#logo-lateral{
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#separator{
+  background-color: #808080;
+  height: 8px !important;
+  margin: 25px auto 20px 25px;
+  width: 90%;
+}
+
+.content-component{
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  left: 50%;
+  margin-left: -22%;
+  margin-top: -20%;
+  top: 47%;
+  position: absolute;
+  width: 67%;
+}
+
+.content{
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid red;
+  height: 90%;
+  min-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+
+nav{
+  visibility: hidden;
+}
+.link-a{
+  text-decoration: none !important;
+}
+
+@media
+screen and (max-width: 990px) {
+  nav{
+    visibility: visible;
+  }
+  .menu-lateral{
+    visibility: hidden;
+  }
+
+  .content-component{
+    background-color: #212529;
+    height: 80%;
+    left: 60%;
+    margin-left: -225px;
+    margin-top: -260px;
+    opacity: 0.7;
+    position: absolute;
+    top: 50%;
+    width: 62%;
+  }
+
+  #logo-lateral{
+    height:80px;
+    width:80px;
+  }
+}

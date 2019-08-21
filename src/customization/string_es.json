@@ -1,0 +1,12 @@
+{
+  "exit": "SALIR",
+  "login": "LOGIN",
+  "home": "INICIO",
+  "title": "title name",
+  "register": "REGISTRO",
+  "withdrawBtc": "RETIRAR BTC",
+  "withdrawDash": "RETIRAR DASH",
+  "transactions": "TRANSACCIONES",
+  "sendtBtc":"ENVIAR BTC",
+  "sendDash":"ENVIAR DASH"
+}
