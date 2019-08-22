@@ -1,15 +1,16 @@
 <template>
   <div>
     <notification-component :label="label" />
-    <div class="content-component">
+    <view-component>
 
-    </div>
+    </view-component>
   </div>
 </template>
 
 <script>
 import Strings from '@/components/strings.js'
 import NotificationComponent from '@/components/NotificationComponent.vue'
+import ViewComponent from '@/components/ViewComponent.vue'
 export default {
   name: 'Home',
   data () {
@@ -18,8 +19,9 @@ export default {
     }
   },
   components: {
-    NotificationComponent,
-    Strings
+    Strings,
+    ViewComponent,
+    NotificationComponent
 
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <b-nav-item>
     <router-link :to="goToLink" class="link-a">
-    <span :class="{'label-component': classStyle, 'label-component-menu-lateral': classStyleLateral }">
+    <span :class="{'label-component': classStyle, 'label-component-menu-lateral': classStyleLateral }" :style="stylesContent">
       {{label}}
     </span>
     </router-link>
@@ -13,17 +13,26 @@ export default {
   name: 'LabelHeader',
   props: {
     label: '',
+    goToLink: '',
     classStyle: '',
     classStyleLateral: '',
-    goToLink: ''
+    color: {
+      type: String,
+      default: '#ffffff'
+    },
+    fontSize: {
+      type: String,
+      default: '16'
+    }
   },
   data () {
     return {
+      stylesContent: {},
       classStyleData: ''
     }
   },
   mounted () {
-    console.log(this.goToLink)
+    this.stylesContent = { 'color': this.color, 'font-size': this.fontSize.concat('px') }
   }
 }
 </script>

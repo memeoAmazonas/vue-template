@@ -4,11 +4,11 @@
   <logo-component :source="'logo_1.png'" :width="'150px'" :height="'150px'" :isVisible="isVisible"/>
   </div>
     <div class="content-menu-lateral">
-    <link-component :goToLink="'/home'" :label="home" :classStyle="false" :classStyleLateral="true"/>
-    <link-component  :goToLink="'/btc/retirement'" :label="withdrawBtc" :classStyle="false" :classStyleLateral="true"/>
-    <link-component  :goToLink="'/'" :label="withdrawDash" :classStyle="false" :classStyleLateral="true"/>
-    <link-component  :goToLink="'/transaction'" :label="transactions" :classStyle="false" :classStyleLateral="true"/>
-    <link-component  :goToLink="'/'" :label="logout" :classStyle="false" :classStyleLateral="true"/>
+    <link-button-component :goToLink="'/home'" :label="home" :classStyle="false" :classStyleLateral="true" :fontSize="'20'"/>
+    <link-button-component  :goToLink="'/btc/retirement'" :label="withdrawBtc" :classStyle="false" :classStyleLateral="true" :fontSize="'20'"/>
+    <link-button-component  :goToLink="'/'" :label="withdrawDash" :classStyle="false" :classStyleLateral="true" :fontSize="'20'"/>
+    <link-button-component  :goToLink="'/transaction'" :label="transactions" :classStyle="false" :classStyleLateral="true" :fontSize="'20'"/>
+    <link-button-component  :goToLink="'/'" :label="logout" :classStyle="false" :classStyleLateral="true" :fontSize="'20'"/>
     </div>
   </div>
   </template>
@@ -16,7 +16,7 @@
 <script>
 import strings from '@/components/strings.js'
 import Separator from '@/components/Separator.vue'
-import LinkComponent from '@/components/LinkComponent.vue'
+import LinkButtonComponent from '@/components/LinkButtonComponent.vue'
 import LogoComponent from '@/components/LogoComponent.vue'
 export default {
   name: 'MenuLateral',
@@ -33,7 +33,7 @@ export default {
   },
   components: {
     Separator,
-    LinkComponent,
+    LinkButtonComponent,
     LogoComponent
   }
 }

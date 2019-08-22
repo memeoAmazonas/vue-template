@@ -6,35 +6,36 @@
         <logo-component :source="'logo_1.png'" :width="'150px'" :height="'150px'" :isVisible="isVisible" />
       </b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <label-component :goToLink="'/home'" :label="home" :classStyle="true" :classStyleLateral="false"/>
-        <label-component :goToLink="'/'" :label="withdrawBtc" :classStyle="true" :classStyleLateral="false"/>
-        <label-component  :goToLink="'/'" :label="withdrawDash" :classStyle="true" :classStyleLateral="false"/>
-        <label-component  :goToLink="'/'" :label="transactions" :classStyle="true" :classStyleLateral="false"/>
-        <label-component :goToLink="'/'" :label="logout" :classStyle="true" :classStyleLateral="false"/>
+        <link-button-component :goToLink="'/home'" :label="home" :classStyle="true" :classStyleLateral="false"/>
+        <link-button-component :goToLink="'/'" :label="withdrawBtc" :classStyle="true" :classStyleLateral="false"/>
+        <link-button-component  :goToLink="'/'" :label="withdrawDash" :classStyle="true" :classStyleLateral="false"/>
+        <link-button-component  :goToLink="'/'" :label="transactions" :classStyle="true" :classStyleLateral="false"/>
+        <link-button-component :goToLink="'/'" :label="logout" :classStyle="true" :classStyleLateral="false"/>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
 </template>
 
 <script>
-import strings from '@/components/strings.js'
-import LabelComponent from '@/components/LinkComponent.vue'
+import Strings from '@/components/strings.js'
 import LogoComponent from '@/components/LogoComponent.vue'
+import LinkButtonComponent from '@/components/LinkButtonComponent.vue'
 export default {
   name: 'Header',
   data () {
     return {
       isVisible: true,
-      home: strings.home,
-      logout: strings.exit,
-      withdrawBtc: strings.withdrawBtc,
-      withdrawDash: strings.withdrawDash,
-      transactions: strings.transactions
+      home: Strings.home,
+      logout: Strings.exit,
+      withdrawBtc: Strings.withdrawBtc,
+      withdrawDash: Strings.withdrawDash,
+      transactions: Strings.transactions
     }
   },
   components: {
-    LabelComponent,
-    LogoComponent
+    Strings,
+    LogoComponent,
+    LinkButtonComponent
   }
 }
 </script>

@@ -5,7 +5,6 @@
       <Header></Header>
     </div>
     <HeaderLogin v-else />
-    <footer />
   </div>
 </template>
 

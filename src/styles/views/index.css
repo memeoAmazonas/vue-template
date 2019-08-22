@@ -1,7 +1,6 @@
 html{
   background-color: transparent !important;
   min-height: 100%;
-;
 }
 
 body{
@@ -9,25 +8,22 @@ body{
   background-position: center;
   background-size: cover;
   min-height: 100% !important;
-
-
 }
+
 .label-component{
   background-color: #7b6e47;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 #6c757d;
-  color: #ffffff;
   padding: 8px;
   display: block;
-  width: 25%;
   text-shadow: 0 0 50px #ffa;
+  width: 25%;
 }
 
 .label-component-menu-lateral{
   background-color: #7b7232;
-  border-radius: 10px;
-  font-size: 20px;
   box-shadow: 0 0 10px 0 #6c757d;
+  border-radius: 10px;
   color: #ffffff;
   display: block;
   padding: 4px;
@@ -58,37 +54,31 @@ body{
   margin-top: 10%;
   width: 90%;
 }
+
 .input-type {
- width: 75%;
- margin:2% 0  0 0%;
-/*
-  height: 58%*/;
+  margin:4% 0  0 0%;
+  width: 75%;
 }
+
 .form-control-lg{
- display: flex;
-  width: 67%;
-  flex-direction: column;
   align-items: center;
-
-}
-#logo-lateral{
   display: flex;
-  margin: 5% 0 2% 0;
-  align-items: center;
   flex-direction: column;
+  width: 67%;
 }
-.btn{
-  margin-top: 2%;
-  width: 30%;
-  background: url("~@/assets/images/boton.png") no-repeat;
-  border: none !important;
-  color: #000000 !important;
 
+#logo-lateral{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0 2% 0;
 }
-.btn:active,
-.btn:focus
-{
-  border:none; /* here configure as your needs */
+
+.btn{
+  background: url("~@/assets/images/boton.png") no-repeat;
+  color: #000000 !important;
+  margin-top: 4%;
+  width: 30%;
 }
 
 #separator{
@@ -116,13 +106,9 @@ body{
   background-color: rgba(0, 0, 0, 0.6);
   border: 2px solid red;
   height: 100%;
-  min-width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
-
 }
 
 nav{
