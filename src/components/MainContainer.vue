@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="this.visible">
+    <div v-if="user">
       <menu-lateral />
       <Header></Header>
     </div>
@@ -10,24 +10,24 @@
 
 <script>
 import Header from '@/views/layout/Header.vue'
-import HeaderLogin from '@/views/layout/HeaderLogin.vue'
 import MenuLateral from '@/components/MenuLateral.vue'
+import HeaderLogin from '@/views/layout/HeaderLogin.vue'
 export default {
   name: 'MainContainer',
+  data () {
+    return {
+      visible: false
+    }
+  },
+  computed: {
+    user () {
+      return this.$store.state.authentication.user
+    }
+  },
   components: {
     Header,
     HeaderLogin,
     MenuLateral
-  },
-  data () {
-    return {
-      visible: true
-    }
-  },
-  mounted () {
-    if (localStorage.user) {
-      this.visible = true
-    }
   }
 }
 </script>

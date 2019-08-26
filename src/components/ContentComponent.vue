@@ -11,6 +11,10 @@ export default {
     width: {
       type: String,
       default: '80'
+    },
+    padding: {
+      type: String,
+      default: '5'
     }
   },
   data () {
@@ -19,7 +23,7 @@ export default {
     }
   },
   mounted () {
-    this.styles = { 'width': this.width.concat('%') }
+    this.styles = { 'width': this.width.concat('%'), padding: this.padding.concat('% 0') }
   }
 }
 </script>

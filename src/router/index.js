@@ -4,8 +4,10 @@ import Router from 'vue-router'
 import Home from '@/views/Home'
 import Login from '@/views/Login'
 import SendBtc from '@/views/SendBtc'
+import SendDash from '@/views/SendDash'
 import Register from '@/views/Register'
-import RetirementBtc from '@/views/RetirementBtc'
+import ReceiveBtc from '@/views/ReceiveBtc'
+import ReceiveDash from '@/views/ReceiveDash'
 import Transactions from '@/views/Transactions'
 import TransactionDetail from '@/views/TransactionDetail'
 
@@ -28,14 +30,24 @@ export const router = new Router({
       component: Register
     },
     {
-      path: '/btc/retirement',
-      name: 'retirementBtc',
-      component: RetirementBtc
+      path: '/btc/receive',
+      name: 'receiveBtc',
+      component: ReceiveBtc
     },
     {
       path: '/btc/send',
       name: 'btcSend',
       component: SendBtc
+    },
+    {
+      path: '/dash/receive',
+      name: 'receiveDash',
+      component: ReceiveDash
+    },
+    {
+      path: '/dash/send',
+      name: 'dashSend',
+      component: SendDash
     },
     {
       path: '/transaction',

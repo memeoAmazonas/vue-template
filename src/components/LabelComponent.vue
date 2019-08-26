@@ -9,7 +9,11 @@ export default {
     label: String,
     fontSize: String,
     fontFamily: String,
-    color: String
+    color: String,
+    textAling: {
+      default: 'center ',
+      type: String
+    }
   },
   data () {
     return {
@@ -17,7 +21,7 @@ export default {
     }
   },
   mounted () {
-    this.styles = { 'font-size': this.fontSize.concat('px'), 'color': this.color }
+    this.styles = { display: 'flex', 'font-size': this.fontSize.concat('%'), 'color': this.color, 'text-align': this.textAling.concat(' !important') }
   }
 }
 </script>

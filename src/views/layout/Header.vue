@@ -3,14 +3,10 @@
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-brand href="#">
-        <logo-component :source="'logo_1.png'" :width="'150px'" :height="'150px'" :isVisible="isVisible" />
+        <logo-component :source="logo" :width="'60'" :height="'50'" />
       </b-navbar-brand>
-      <b-navbar-nav class="ml-auto">
-        <link-button-component :goToLink="'/home'" :label="home" :classStyle="true" :classStyleLateral="false"/>
-        <link-button-component :goToLink="'/'" :label="withdrawBtc" :classStyle="true" :classStyleLateral="false"/>
-        <link-button-component  :goToLink="'/'" :label="withdrawDash" :classStyle="true" :classStyleLateral="false"/>
-        <link-button-component  :goToLink="'/'" :label="transactions" :classStyle="true" :classStyleLateral="false"/>
-        <link-button-component :goToLink="'/'" :label="logout" :classStyle="true" :classStyleLateral="false"/>
+      <b-navbar-nav class="ml-auto"  v-for="item in items" :key="item.label">
+        <link-button-component :goToLink="item.route" :label="item.label" :classStyle="classStyle" :fontSize="fontSize" />
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -24,12 +20,31 @@ export default {
   name: 'Header',
   data () {
     return {
-      isVisible: true,
-      home: Strings.home,
-      logout: Strings.exit,
-      withdrawBtc: Strings.withdrawBtc,
-      withdrawDash: Strings.withdrawDash,
-      transactions: Strings.transactions
+      fontSize: '90',
+      logo: 'logo_1.png',
+      classStyle: 'label-component',
+      items: [
+        {
+          route: '/home',
+          label: Strings.home
+        },
+        {
+          route: '/btc/retirement',
+          label: Strings.withdrawBtc
+        },
+        {
+          route: '/',
+          label: Strings.withdrawDash
+        },
+        {
+          route: '/transaction',
+          label: Strings.transactions
+        },
+        {
+          route: '/',
+          label: Strings.exit
+        }
+      ]
     }
   },
   components: {

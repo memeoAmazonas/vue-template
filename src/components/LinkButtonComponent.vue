@@ -1,7 +1,10 @@
 <template>
   <b-nav-item>
     <router-link :to="goToLink" class="link-a">
+<!--
     <span :class="{'label-component': classStyle, 'label-component-menu-lateral': classStyleLateral }" :style="stylesContent">
+-->
+    <span :class="classStyle" :style="stylesContent">
       {{label}}
     </span>
     </router-link>
@@ -22,7 +25,7 @@ export default {
     },
     fontSize: {
       type: String,
-      default: '16'
+      default: '100'
     }
   },
   data () {
@@ -32,7 +35,7 @@ export default {
     }
   },
   mounted () {
-    this.stylesContent = { 'color': this.color, 'font-size': this.fontSize.concat('px') }
+    this.stylesContent = { 'color': this.color, 'font-size': this.fontSize.concat('%') }
   }
 }
 </script>
@@ -40,3 +43,4 @@ export default {
 <style scoped>
 
 </style>
+<!--'label-component': classStyle, 'label-component-menu-lateral': classStyleLateral-->

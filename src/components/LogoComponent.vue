@@ -1,7 +1,6 @@
 <template>
   <div id="logo-lateral">
   <img :src="require(`@/assets/images/${source}`)"  :style="styles">
-  <separador v-if="isVisible"/>
   </div>
 </template>
 
@@ -12,12 +11,7 @@ export default {
   props: {
     width: '',
     source: '',
-    height: '',
-    isVisible: {
-      type: Boolean,
-      require: true,
-      default: function () { return false }
-    }
+    height: ''
   },
   data () {
     return {
@@ -28,9 +22,8 @@ export default {
     Separador
   },
   mounted () {
-    this.styles = { 'width': this.width, 'height': this.height, 'margin': this.isVisible ? ' 20% auto 15% 24%' : '4% auto 0 auto' }
+    this.styles = { 'width': this.width.concat('%'), 'height': this.height.concat('%') }
   }
-
 }
 </script>
 

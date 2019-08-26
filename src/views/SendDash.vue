@@ -1,7 +1,7 @@
 <template>
   <view-component :left="'22'">
     <notification-component :label="label" />
-    <send-cryptocurrency-component :label="label" :source="source" :color="'#ebae34'" :currency="symbol" :placeholder="placeholder.concat(symbol)"  />
+    <send-cryptocurrency-component :label="label" :source="source" :color="'#0080bf'" :currency="symbol" :placeholder="placeholder.concat(symbol)" :disabled="true"  />
   </view-component>
 </template>
 
@@ -11,13 +11,13 @@ import ViewComponent from '@/components/ViewComponent.vue'
 import NotificationComponent from '@/components/NotificationComponent.vue'
 import SendCryptocurrencyComponent from '@/components/SendCryptocurrencyComponent.vue'
 export default {
-  name: 'SendBtc',
+  name: 'SendDash',
   data: function () {
     return {
-      symbol: 'BTC',
+      symbol: 'DASH',
       source: 'logo_1.png',
       placeholder: Strings.walletAddres,
-      label: Strings.removeBtc
+      label: Strings.removeDash
     }
   },
   components: {

@@ -2,16 +2,72 @@
   "exit": "SALIR",
   "login": "LOGIN",
   "home": "INICIO",
+  "send": "ENVIAR",
   "access": "ACCEDER",
   "title": "title name",
   "register": "REGISTRO",
   "sendtBtc":"ENVIAR BTC",
   "sendDash":"ENVIAR DASH",
-  "loginLabel": "Iniciar Sesión",
-  "withdrawBtc": "RETIRAR BTC",
-  "withdrawDash": "RETIRAR DASH",
-  "transactions": "TRANSACCIONES",
+  "password": "Contraseña",
+  "withdrawBtc": "RECIBIR BTC",
+  "removeBtc": "RETIRAR BTC",
+  "walletAddres": "Dirección ",
   "email": "Correo Electronico",
-  "password": "Contraseña"
+  "loginLabel": "Iniciar Sesión",
+  "createPayment": "CREAR PAGO",
+  "withdrawDash": "RECIBIR DASH",
+  "removeDash": "RETIRAR DASH",
+  "transactions": "TRANSACCIONES",
+  "receiveBtc": "RECIBIR PAGO BTC",
+  "newOnWay": "¿Eres nuevo en WAY?",
+  "receiveDash": "RECIBIR PAGO DASH",
+  "receiveDashLabel": "RECIBIR DASHS",
+  "receiveBtcLabel": "RECIBIR BITCOINS",
+  "forgotPassword": "¿Ha Olvidado Su Contraseña?",
+  "registerNow": "¡Registrate Ahora!",
+  "errors": {
+    "loginIncorrect": "Error durante el inicio de sesion"
+  },
+  "headerTransaction": [
+    {
+      "key": "code",
+      "label": "HASH"
+    },
+    {
+      "key": "amount",
+      "label":"Monto",
+      "formatter": "setStyle"
+    },
+    {
+      "key": "currency",
+      "label": "Cryptomoneda"
+    },
+    {
+      "key": "payment_time",
+      "label": "Fecha",
+      "formatter":"getDate"
+    }
+  ],
+  "headerTransactionDetail": [
+    {
+      "key": "payment_address",
+      "label": "Direccion"
+    },{
+      "key": "payment_amount",
+      "label": "Monto"
+    },{
+      "key": "payment_amount_total",
+      "label": "Monto total"
+    },{
+      "key": "payment_code",
+      "label": "Codigo"
+    },{
+      "key": "payment_status",
+      "label": "Estado"
+    },{
+      "key": "payment_transactions",
+      "label": "Transacciones"
+    }
+  ]
 
 }

@@ -1,7 +1,7 @@
 <template>
-  <view-component :left="'22'">
+  <view-component :left="'25'">
     <notification-component :label="label" />
-    <send-cryptocurrency-component :label="label" :source="source" :color="'#ebae34'" :currency="symbol" :placeholder="placeholder.concat(symbol)"  />
+    <receive-cryptocurrency-component :source="source" :color="'#ebae34'" :label="labelSend" :disabled ="false" :currency="'$'"/>
   </view-component>
 </template>
 
@@ -9,22 +9,21 @@
 import Strings from '@/components/strings.js'
 import ViewComponent from '@/components/ViewComponent.vue'
 import NotificationComponent from '@/components/NotificationComponent.vue'
-import SendCryptocurrencyComponent from '@/components/SendCryptocurrencyComponent.vue'
+import ReceiveCryptocurrencyComponent from '@/components/ReceiveCryptocurrencyComponent.vue'
 export default {
-  name: 'SendBtc',
-  data: function () {
+  name: 'ReceiveBtc',
+  data () {
     return {
-      symbol: 'BTC',
       source: 'logo_1.png',
-      placeholder: Strings.walletAddres,
-      label: Strings.removeBtc
+      label: Strings.withdrawBtc,
+      labelSend: Strings.receiveBtcLabel
     }
   },
   components: {
     Strings,
     ViewComponent,
     NotificationComponent,
-    SendCryptocurrencyComponent
+    ReceiveCryptocurrencyComponent
   }
 }
 </script>

@@ -23,18 +23,13 @@ body{
 .label-component-menu-lateral{
   background-color: #7b7232;
   box-shadow: 0 0 10px 0 #6c757d;
-  border-radius: 10px;
+  border-radius: 3%;
   color: #ffffff;
   display: block;
-  padding: 4px;
+  padding: 1%;
   text-align: center;
   text-shadow: 0 0 50px #ffa;
   width: 100%;
-}
-
-.space-between{
-  background-color: transparent !important;
-  margin-top: 20px;
 }
 
 .menu-lateral{
@@ -46,18 +41,26 @@ body{
   width: 20%;
   z-index: 0;
 }
+.content-menu-lateral{
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
 
 .logo-menu-lateral{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   height: 40%;
-  margin-top: 10%;
-  width: 90%;
+  width: 100%;
+  margin-top: 7%;
 }
 
 .input-type {
   margin:4% 0  0 0%;
-  width: 75%;
+  width: 90%;
 }
 
 .form-control-lg{
@@ -71,10 +74,18 @@ body{
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 5% 0 2% 0;
 }
 
-.btn{
+.nav-link{
+  padding: 1% !important;
+  margin-bottom: 1%;
+  text-decoration: none !important;
+}
+li{
+  list-style: none;
+}
+
+.btn-login{
   background: url("~@/assets/images/boton.png") no-repeat;
   color: #000000 !important;
   margin-top: 4%;
@@ -83,48 +94,146 @@ body{
 
 #separator{
   background-color: #808080;
-  height: 8px !important;
-  margin: 25px auto 20px 25px;
+  height: 1% !important;
   width: 90%;
 
 }
-
-.content-component{
-  display: flex;
+.content-cryptocurrency {
   align-items: center;
-  justify-content: center;
-  height: 90%;
-  left: 50%;
-  margin-left: -22%;
-  margin-top: -20%;
-  top: 47%;
-  position: absolute;
-  width: 67%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
 }
 
-.content{
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 2px solid red;
-  height: 100%;
+.container{
+  background-color: transparent !important;
+  bottom: 10%;
+  display: flex;
+  justify-content: center !important;
+  align-content: space-between;
+  min-height: 80%;
+  position: absolute;
+  top: 10%;
+  width: 50%;
+}
+
+.content-cryptocurrency-receive {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100% !important;
+
+}
+.forgoot-password-label-login{
+
+  align-content: space-around;
+  color: #60a895 !important;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.register-login{
+  width: 100%;
+}
+#register-login-register{
+  display: flex;
+  width: 100% !important;
+  height: 100%;
+  align-items: center;
+}
+.register-login-register-link{
+  color: #60a895 !important;
+  display: flex;
+
+}
+.content{
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 nav{
-  visibility: hidden;
+  display: none !important;
 }
 .link-a{
   text-decoration: none !important;
 }
+.home-cryptocurrency {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: stretch !important;
+}
+
+.table-t {
+  background-color:rgba(218,183,33,0.5);
+  color: #ffffff !important;
+  margin: 2% 0 2% 2%;
+  text-align: center;
+  width: 100% !important;
+
+
+}
+.table-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.table-container-img {
+  width: 100%;
+  margin-top: -4%;
+  height: 50% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+.table-t thead tr th {
+  background-color:rgba(218,183,33,0.5);
+  border: none;
+  border-right-style: solid;
+  border-right-color: #ffffff;
+  border-left-style: solid;
+  border-left-color: #ffffff;
+
+}
+
+.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
+  background-color:rgba(218,183,33,0.5);
+  border: none;
+  opacity: 0.8;
+  border-right-style: solid;
+  border-right-color: #ffffff;
+  border-left-style: solid;
+  border-left-color: #ffffff;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: rgba(218,183,33,0.13);
+  border: none;
+  border-right-style: solid;
+  border-right-color: #ffffff;
+  border-left-style: solid;
+  border-left-color: #ffffff;
+}
+
 
 @media
 screen and (max-width: 990px) {
   nav{
-    visibility: visible;
+    display: block !important;
   }
   .menu-lateral{
-    visibility: hidden;
+    display: none;
   }
 
   .content-component{
@@ -140,7 +249,8 @@ screen and (max-width: 990px) {
   }
 
   #logo-lateral{
-    height:80px;
-    width:80px;
+    margin: 0;
+    height:80%;
+    width:80%;
   }
 }
