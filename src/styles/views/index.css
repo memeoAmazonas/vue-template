@@ -134,18 +134,31 @@ li{
   width: 100%;
 }
 .register-login{
-  width: 100%;
+  width: 75%;
 }
-#register-login-register{
+.register-login-register{
+  align-items: center;
   display: flex;
   width: 100% !important;
-  height: 100%;
-  align-items: center;
+  height: 23%;
+  justify-items: center;
+  justify-content: center;
 }
+
 .register-login-register-link{
   color: #60a895 !important;
-  display: flex;
+  display: flex !important;
+  width: 100% !important;
+  text-align: left;
 
+}
+.register-login-content {
+  width: 50%;
+  display: block;
+}
+.register-login-content >span {
+  display: block !important;
+  text-align: right !important;
 }
 .content{
   align-items: center;
@@ -192,7 +205,6 @@ nav{
   display: flex;
   flex-direction: column;
   align-items: center;
-
 
 }
 .table-t thead tr th {

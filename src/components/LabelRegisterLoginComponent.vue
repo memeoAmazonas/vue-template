@@ -1,9 +1,13 @@
 <template>
   <div class="register-login">
     <link-button-component :goToLink="'/'" :label="forgotPassword" :classStyle="classStyle" :fontSize="fontSize" />
-    <div id="register-login-register">
-      <label-component  :color="'#879fa3'" :label="newOnWay" :fontSize="fontSi"/>
-      <link-button-component :goToLink="'/'" :label="registerNow" :classStyle="classStyleBo" :fontSize="fontSi" />
+    <div class="register-login-register">
+      <div class="register-login-content">
+      <label-component  :color="'#879fa3'" :label="newOnWay" :fontSize="fontSi" :textAling="'right'"/>
+      </div>
+      <div class="register-login-content">
+      <link-button-component :goToLink="'/register'" :label="registerNow" :classStyle="classStyleBo" :fontSize="fontSi" />
+      </div>
     </div>
   </div>
 
@@ -20,8 +24,8 @@ export default {
       fontSize: '79',
       fontSi: '60',
       newOnWay: Strings.newOnWay,
-      forgotPassword: Strings.forgotPassword,
       registerNow: Strings.registerNow,
+      forgotPassword: Strings.forgotPassword,
       classStyle: 'forgoot-password-label-login',
       classStyleBo: 'register-login-register-link'
     }

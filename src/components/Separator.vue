@@ -1,13 +1,23 @@
 <template>
-  <div id="separator"/>
+  <div id="separator" :style="styles"/>
 </template>
-
 <script>
 export default {
-  name: 'Separator'
+  name: 'Separator',
+  props: {
+    height: {
+      type: String,
+      default: '1'
+    }
+  },
+  data () {
+    return {
+      styles: {}
+    }
+  },
+  mounted () {
+    this.styles = { 'height': this.height.concat('% !important') }
+  }
 }
 </script>
-
-<style scoped>
-
-</style>
+<style scoped></style>

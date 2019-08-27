@@ -2,7 +2,7 @@
   <div class="table-container">
     <div class="table-container-img">
     <logo-component :source="source" :width="'80'" :height="'80'" />
-      <separator />
+      <separator :height="'2'" />
     </div>
     <b-table class="table-t" striped hover small :items="items" :fields="labels" >
       <template slot="code" slot-scope="data">
@@ -16,8 +16,8 @@
 
 <script>
 import moment from 'moment'
-import LogoComponent from '@/components/LogoComponent.vue'
 import Separator from '@/components/Separator.vue'
+import LogoComponent from '@/components/LogoComponent.vue'
 export default {
   name: 'TransactionTableComponent',
   props: {

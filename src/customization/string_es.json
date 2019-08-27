@@ -1,37 +1,42 @@
 {
-  "exit": "SALIR",
-  "login": "LOGIN",
-  "home": "INICIO",
-  "send": "ENVIAR",
-  "access": "ACCEDER",
-  "title": "title name",
-  "register": "REGISTRO",
-  "sendtBtc":"ENVIAR BTC",
-  "sendDash":"ENVIAR DASH",
+  "exit": "Salir",
+  "login": "Login",
+  "home": "Inicio",
+  "send": "Enviar",
+  "access": "Acceder",
+  "register": "Registro",
+  "sendtBtc":"Enviar BTC",
+  "sendDash":"Enviar DASH",
   "password": "Contraseña",
-  "withdrawBtc": "RECIBIR BTC",
-  "removeBtc": "RETIRAR BTC",
+  "accountExist": "¿Ya Tiene Una Cuenta?",
+  "passwordConfirm": "Confirmar Contraseña",
+  "removeBtc": "Retirar BTC",
+  "withdrawBtc": "Recibir BTC",
   "walletAddres": "Dirección ",
+  "removeDash": "Retirar DASH",
   "email": "Correo Electronico",
+  "username": "Nombre de Usuario",
   "loginLabel": "Iniciar Sesión",
-  "createPayment": "CREAR PAGO",
-  "withdrawDash": "RECIBIR DASH",
-  "removeDash": "RETIRAR DASH",
-  "transactions": "TRANSACCIONES",
-  "receiveBtc": "RECIBIR PAGO BTC",
-  "newOnWay": "¿Eres nuevo en WAY?",
-  "receiveDash": "RECIBIR PAGO DASH",
-  "receiveDashLabel": "RECIBIR DASHS",
-  "receiveBtcLabel": "RECIBIR BITCOINS",
-  "forgotPassword": "¿Ha Olvidado Su Contraseña?",
+  "createPayment": "Crear Pago",
+  "withdrawDash": "Recibir DASH",
+  "transactions": "Transacciones",
+  "receiveBtc": "Recibir Pago BTC",
+  "newOnWay": "¿Eres Nuevo en WAY?",
+  "registerNewAccount": "Registrarse",
+  "receiveDash": "Recibir Pago DASH",
+  "receiveDashLabel": "Recibir DASH",
   "registerNow": "¡Registrate Ahora!",
+  "receiveBtcLabel": "Recibir BITCOIN",
+  "transactionDetail": "Detalle Transacciones",
+  "forgotPassword": "¿Ha Olvidado su Contraseña?",
+  "recoveryPassword": "Restablecer Contraseña",
   "errors": {
-    "loginIncorrect": "Error durante el inicio de sesion"
+    "loginIncorrect": "Error Durante el Inicio de Sesión"
   },
   "headerTransaction": [
     {
       "key": "code",
-      "label": "HASH"
+      "label": "Hash"
     },
     {
       "key": "amount",
@@ -51,16 +56,16 @@
   "headerTransactionDetail": [
     {
       "key": "payment_address",
-      "label": "Direccion"
+      "label": "Dirección"
     },{
       "key": "payment_amount",
-      "label": "Monto"
+      "label": "Mónto"
     },{
       "key": "payment_amount_total",
-      "label": "Monto total"
+      "label": "Mónto total"
     },{
       "key": "payment_code",
-      "label": "Codigo"
+      "label": "Código"
     },{
       "key": "payment_status",
       "label": "Estado"

@@ -11,5 +11,5 @@ export const api = {
   'createPayment': 'https://localhost:3000/createPayment',
   'getBalanceBtc': 'https://localhost:3000/getBalanceBtc',
   'restorePassword': 'https://localhost:3000/restorePassword',
-  'transactionDetail': 'https://localhost:3000/transactionDetail'
+  'transactionDetailService': 'https://localhost:3000/transactionDetail'
 }

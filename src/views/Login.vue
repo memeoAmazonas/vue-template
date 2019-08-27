@@ -53,9 +53,9 @@ export default {
   },
   mounted () {
     if (localStorage.user) {
-      router.push({ name: 'home' })
+      router.push('/home')
     } else {
-      router.push({ name: 'login' })
+      router.push('/')
     }
   },
   computed: {
