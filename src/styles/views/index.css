@@ -14,8 +14,8 @@ body{
   background-color: #7b6e47;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 #6c757d;
-  padding: 8px;
   display: block;
+  padding: 8px;
   text-shadow: 0 0 50px #ffa;
   width: 25%;
 }
@@ -42,20 +42,20 @@ body{
   z-index: 0;
 }
 .content-menu-lateral{
-  margin-top: 3%;
+  align-content: center;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  margin-top: 3%;
 }
 
 .logo-menu-lateral{
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   height: 40%;
-  width: 100%;
+  justify-content: space-around;
   margin-top: 7%;
+  width: 100%;
 }
 
 .input-type {
@@ -64,10 +64,20 @@ body{
 }
 
 .form-control-lg{
-  align-items: center;
+  margin: 5% 0;
+  width: 70%;
   display: flex;
   flex-direction: column;
-  width: 67%;
+  align-items: center;
+}
+.footer-register-component{
+  margin-top: 4%;
+  width: 150%;
+
+}
+.footer-register-component-content{
+  display: flex;
+  justify-content: center;
 }
 
 #logo-lateral{
@@ -77,8 +87,8 @@ body{
 }
 
 .nav-link{
-  padding: 1% !important;
   margin-bottom: 1%;
+  padding: 1% !important;
   text-decoration: none !important;
 }
 li{
@@ -89,15 +99,15 @@ li{
   background: url("~@/assets/images/boton.png") no-repeat;
   color: #000000 !important;
   margin-top: 4%;
-  width: 30%;
+  width: 34%;
 }
 
 #separator{
   background-color: #808080;
   height: 1% !important;
   width: 90%;
-
 }
+
 .content-cryptocurrency {
   align-items: center;
   display: flex;
@@ -105,82 +115,115 @@ li{
   padding-top: 5%;
 }
 
+.content-child-component {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  height: 90% !important;
+  padding: 4% 0;
+}
+
 .container{
+  align-content: space-between;
   background-color: transparent !important;
   bottom: 10%;
   display: flex;
   justify-content: center !important;
-  align-content: space-between;
   min-height: 80%;
   position: absolute;
   top: 10%;
   width: 50%;
 }
 
+.view-container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  background-color: transparent !important;
+  width: 80%;
+  height: 100%;
+}
 .content-cryptocurrency-receive {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100% !important;
-
+  justify-content: center;
 }
 .forgoot-password-label-login{
-
   align-content: space-around;
   color: #60a895 !important;
   display: flex;
   justify-content: center;
   width: 100%;
 }
+
 .register-login{
   width: 75%;
 }
+
 .register-login-register{
   align-items: center;
   display: flex;
-  width: 100% !important;
   height: 23%;
   justify-items: center;
   justify-content: center;
+  width: 100% !important;
 }
 
 .register-login-register-link{
   color: #60a895 !important;
   display: flex !important;
-  width: 100% !important;
   text-align: left;
+  width: 100% !important;
+}
 
-}
 .register-login-content {
-  width: 50%;
   display: block;
+  width: 50%;
 }
+
 .register-login-content >span {
   display: block !important;
   text-align: right !important;
 }
+
 .content{
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
-  opacity: 2;
   display: flex;
   flex-direction: column;
   height: 100%;
+  opacity: 2;
 }
 
 nav{
   display: none !important;
 }
+
 .link-a{
   text-decoration: none !important;
-}
-.home-cryptocurrency {
-  width: 100%;
   display: flex;
+  width: 110% !important;
+}
+.link-a-lateral{
+  text-decoration: none !important;
+  display: flex;
+  width: 100% !important;
+}
+
+.home-cryptocurrency {
+  display: flex;
+  justify-content: stretch !important;
   padding: 0;
   margin: 0;
-  justify-content: stretch !important;
+  width: 100%;
 }
 
 .table-t {
@@ -189,22 +232,21 @@ nav{
   margin: 2% 0 2% 2%;
   text-align: center;
   width: 100% !important;
-
-
 }
+
 .table-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
+
 .table-container-img {
-  width: 100%;
-  margin-top: -4%;
-  height: 50% !important;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 50% !important;
+  width: 100%;
 
 }
 .table-t thead tr th {
@@ -214,18 +256,17 @@ nav{
   border-right-color: #ffffff;
   border-left-style: solid;
   border-left-color: #ffffff;
-
 }
 
 .table-striped>tbody>tr:nth-child(even)>td,
 .table-striped>tbody>tr:nth-child(even)>th {
   background-color:rgba(218,183,33,0.5);
   border: none;
-  opacity: 0.8;
   border-right-style: solid;
   border-right-color: #ffffff;
   border-left-style: solid;
   border-left-color: #ffffff;
+  opacity: 0.8;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td,
@@ -237,7 +278,6 @@ nav{
   border-left-style: solid;
   border-left-color: #ffffff;
 }
-
 
 @media
 screen and (max-width: 990px) {

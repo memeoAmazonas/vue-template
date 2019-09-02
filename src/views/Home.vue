@@ -1,10 +1,10 @@
 <template>
-  <div>
+ <div>
     <notification-component :label="label" />
-    <view-component :left="'23'" v-for="item in cryptocurrencyList" :key="item.icon">
+    <view-component :left="'30'" v-for="item in cryptocurrencyList" :key="item.icon">
       <div v-for="item in cryptocurrencyList" :key="item.icon" class="home-cryptocurrency">
       <cryptocurrency-component  :source="item.icon" :labelUsd="item.priceUsd" :labelEur="item.priceEuro" :color="item.color" :url="item.url" :labelCryptocurrency="item.labelCryptocurrency"/>
-      </div>:
+      </div>
     </view-component>
   </div>
 </template>
@@ -16,6 +16,7 @@ import { api } from '@/services/ApiRoutes'
 import Strings from '@/components/strings.js'
 import ViewComponent from '@/components/ViewComponent.vue'
 import NotificationComponent from '@/components/NotificationComponent.vue'
+import ViewContainerComponent from '@/components/ViewContainerComponent.vue'
 import CryptocurrencyComponent from '@/components/CryptocurrencyComponent.vue'
 export default {
   name: 'Home',
@@ -46,6 +47,7 @@ export default {
     Strings,
     ViewComponent,
     NotificationComponent,
+    ViewContainerComponent,
     CryptocurrencyComponent
   },
   mounted () {

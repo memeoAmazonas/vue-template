@@ -1,43 +1,20 @@
 .<template>
-  <div>
-    <notification-component :label="label" />
-    <view-component>
-      <content-component :width="'50'">
-        <logo-component :source="'logo_1.png'" :width="'90'" :height="'80'"/>
-        <LabelComponent :fontSize="'200'" :color="'#DAB822'" :label="label" />
-        <form ref="form" class="form-control-lg">
-          <input v-model="username" type="email" :placeholder="email" class="input-type">
-          <b-button class="btn-login" variant="light" @click.prevent="submit">{{send}} </b-button>
-            <div class="register-login-register">
-              <div class="register-login-content res">
-                <label-component  :color="'#879fa3'" :label="accountExist" :fontSize="fontSi" :textAling="'right'"/>
-              </div>
-              <div class="register-login-content">
-                <link-button-component :goToLink="'/'" :label="loginLabel" :classStyle="classStyleBo" :fontSize="fontSi" />
-              </div>
-            </div>
-            <div class="register-login-register">
-              <div class="register-login-content">
-                <label-component  :color="'#879fa3'" :label="registerLabel" :fontSize="fontSi"  :textAling="'right'"/>
-              </div>
-              <div class="register-login-content">
-                <link-button-component :goToLink="'/register'" :label="registerNow" :classStyle="classStyleBo" :fontSize="fontSi" />
-              </div>
-            </div>
-        </form>
-      </content-component>
-    </view-component>
-  </div>
+  <view-container-component :label="label" :title="label">
+    <form ref="form" class="form-control-lg">
+      <input v-model="username" type="email" :placeholder="emailLabel + '*'" class="input-type">
+      <b-button class="btn-login" variant="light" @click.prevent="submit" :disabled="isDisabled">{{send}} </b-button>
+      <footer-restore-password-component />
+    </form>
+  </view-container-component>
 </template>
 
 <script>
+import axios from 'axios'
+import { router } from '@/router/index.js'
+import { api } from '@/services/ApiRoutes'
 import Strings from '@/components/strings.js'
-import LogoComponent from '@/components/LogoComponent.vue'
-import ViewComponent from '@/components/ViewComponent.vue'
-import LabelComponent from '@/components/LabelComponent.vue'
-import ContentComponent from '@/components/ContentComponent.vue'
-import LinkButtonComponent from '@/components/LinkButtonComponent.vue'
-import NotificationComponent from '@/components/NotificationComponent.vue'
+import ViewContainerComponent from '@/components/ViewContainerComponent.vue'
+import FooterRestorePasswordComponent from '@/components/FooterRestorePasswordComponent.vue'
 
 export default {
   name: 'restorePassword',
@@ -47,36 +24,55 @@ export default {
       fontSi: '70',
       username: '',
       isVisible: false,
+      emailLabel: Strings.email,
       send: Strings.send,
-      email: Strings.email,
       loginLabel: Strings.loginLabel,
       registerLabel: Strings.newOnWay,
       label: Strings.recoveryPassword,
       registerNow: Strings.registerNow,
       accountExist: Strings.accountExist,
-      register: Strings.registerNewAccount,
       classStyleBo: 'register-login-register-link'
 
     }
   },
+  computed: {
+    isDisabled () {
+      return this.username === ''
+    }
+  },
+  methods: {
+    submit () {
+      var email = {
+        email: this.username
+      }
+      axios.post(api.restorePassword, email, { headers: { 'Content-Type': 'application/json' } }).then(response => {
+        if (response.status === 200) {
+          this.$notify({
+            title: 'Email valido.',
+            type: 'success',
+            text: ''
+          })
+          router.push({ name: 'newPassword', params: { token: response.data.token } })
+        }
+      }).catch(error => {
+        if (error) {
+          this.error = error.response.data.error
+          this.$notify({
+            title: 'Error durante el proceso.',
+            type: 'error',
+            text: this.error + ' Intente nuevamente'
+          })
+        }
+      })
+    }
+  },
   components: {
     Strings,
-    LogoComponent,
-    ViewComponent,
-    LabelComponent,
-    ContentComponent,
-    LinkButtonComponent,
-    NotificationComponent
+    ViewContainerComponent,
+    FooterRestorePasswordComponent
   }
 }
 </script>
 
 <style scoped>
-  .register-login-register { height: 100% !important;}
-  .res {
-    margin-left: 10%;
-  }
-  .btn {
-    margin: 4% 0;
-  }
 </style>

@@ -1,30 +1,19 @@
 .<template>
-  <div>
-    <notification-component :label="label" />
-    <view-component>
-      <content-component :width="'50'">
-        <logo-component :source="'logo_1.png'" :width="'90'" :height="'80'"/>
-        <LabelComponent :fontSize="'200'" :color="'#DAB822'" :label="login" />
-        <form ref="form" class="form-control-lg">
-          <input v-model="username" type="email" :placeholder="email" class="input-type">
-          <input v-model="password" type="password" :placeholder="pass" class="input-type">
-          <b-button class="btn-login" variant="light" @click.prevent="submit">{{access}} </b-button>
-          <label-register-login-component/>
-        </form>
-      </content-component>
-    </view-component>
-  </div>
+  <view-container-component :label="label" :title="login">
+    <form ref="form" class="form-control-lg">
+      <input v-model="username" type="email" :placeholder="email" class="input-type">
+      <input v-model="password" type="password" :placeholder="pass" class="input-type">
+      <b-button class="btn-login" variant="light" @click.prevent="submit">{{access}} </b-button>
+      <footer-login-component />
+    </form>
+  </view-container-component>
 </template>
 
 <script>
-import Strings from '@/components/strings.js'
 import { router } from '@/router/index.js'
-import LogoComponent from '@/components/LogoComponent.vue'
-import ViewComponent from '@/components/ViewComponent.vue'
-import LabelComponent from '@/components/LabelComponent.vue'
-import ContentComponent from '@/components/ContentComponent.vue'
-import NotificationComponent from '@/components/NotificationComponent.vue'
-import LabelRegisterLoginComponent from '@/components/LabelRegisterLoginComponent.vue'
+import Strings from '@/components/strings.js'
+import FooterLoginComponent from '@/components/FooterLoginComponent.vue'
+import ViewContainerComponent from '@/components/ViewContainerComponent.vue'
 
 export default {
   name: 'login',
@@ -44,12 +33,8 @@ export default {
   },
   components: {
     Strings,
-    LogoComponent,
-    ViewComponent,
-    LabelComponent,
-    ContentComponent,
-    NotificationComponent,
-    LabelRegisterLoginComponent
+    FooterLoginComponent,
+    ViewContainerComponent
   },
   mounted () {
     if (localStorage.user) {

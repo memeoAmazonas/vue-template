@@ -1,6 +1,6 @@
 <template>
   <b-nav-item>
-    <router-link :to="goToLink" class="link-a">
+    <router-link :to="goToLink" :class="classDefault">
 <!--
     <span :class="{'label-component': classStyle, 'label-component-menu-lateral': classStyleLateral }" :style="stylesContent">
 -->
@@ -18,6 +18,10 @@ export default {
     label: '',
     goToLink: '',
     classStyle: '',
+    classDefault: {
+      type: String,
+      default: 'link-a-lateral'
+    },
     classStyleLateral: '',
     color: {
       type: String,

@@ -1,5 +1,5 @@
 <template>
-  <view-component :left="'22'">
+  <view-component :left="'28'">
     <notification-component :label="label" />
     <send-cryptocurrency-component :label="label" :source="source" :color="'#ebae34'" :currency="symbol" :placeholder="placeholder.concat(symbol)"  />
   </view-component>

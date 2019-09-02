@@ -31,14 +31,11 @@ export default {
     axios.post(api.transactions, data).then(response => {
       if (response.status === 200) {
         let result = response.data.data
-        for (let i = 0; i < 8; i++) {
+        let total = result.length > 8 ? 8 : result.length
+        for (let i = 0; i < total; i++) {
           this.transactions.push(result[i])
         }
         this.items = response.data.data.length
-      }
-      if (this.transactions.length > 10) {
-        this.tableContainer.height = '110%'
-        this.tableContainer.top = '300px'
       }
     })
   },
