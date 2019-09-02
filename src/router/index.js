@@ -10,54 +10,60 @@ import ReceiveBtc from '@/views/ReceiveBtc'
 import ReceiveDash from '@/views/ReceiveDash'
 import Transactions from '@/views/Transactions'
 import TransactionDetail from '@/views/TransactionDetail'
+import RestorePassword from '@/views/RestorePassword'
 
 Vue.use(Router)
 export const router = new Router({
   routes: [
     {
-      path: '/',
       name: 'login',
+      path: '/',
       component: Login
     },
     {
-      path: '/home',
       name: 'home',
+      path: '/home',
       component: Home
     },
     {
-      path: '/register',
       name: 'register',
+      path: '/register',
       component: Register
     },
     {
-      path: '/btc/receive',
       name: 'receiveBtc',
+      path: '/btc/receive',
       component: ReceiveBtc
     },
     {
-      path: '/btc/send',
       name: 'btcSend',
+      path: '/btc/send',
       component: SendBtc
     },
     {
-      path: '/dash/receive',
       name: 'receiveDash',
+      path: '/dash/receive',
       component: ReceiveDash
     },
     {
-      path: '/dash/send',
       name: 'dashSend',
+      path: '/dash/send',
       component: SendDash
     },
     {
-      path: '/transaction',
       name: 'transaction',
+      path: '/transaction',
       component: Transactions
     },
     {
-      path: '/transaction/detail',
       name: 'transactionDetail',
+      path: '/transaction/detail',
       component: TransactionDetail
+    },
+    {
+      name: 'restorePassword',
+      path: '/restore-password',
+      component: RestorePassword
     }
   ]
 })

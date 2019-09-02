@@ -24,7 +24,7 @@
               <label-component  :color="'#879fa3'" :label="passwordLabel" :fontSize="fontSi"/>
             </div>
             <div class="register-login-content">
-              <link-button-component :goToLink="'/register'" :label="passwordLabelLink" :classStyle="classStyleBo" :fontSize="fontSi" />
+              <link-button-component :goToLink="'/restore-password'" :label="passwordLabelLink" :classStyle="classStyleBo" :fontSize="fontSi" />
             </div>
           </div>
         </form>
@@ -34,6 +34,9 @@
 </template>
 
 <script>
+import axios from 'axios'
+import { router } from '@/router/index.js'
+import { api } from '@/services/ApiRoutes'
 import Strings from '@/components/strings.js'
 import LogoComponent from '@/components/LogoComponent.vue'
 import ViewComponent from '@/components/ViewComponent.vue'
@@ -41,32 +44,31 @@ import LabelComponent from '@/components/LabelComponent.vue'
 import LinkButtonComponent from '@/components/LinkButtonComponent.vue'
 import ContentComponent from '@/components/ContentComponent.vue'
 import NotificationComponent from '@/components/NotificationComponent.vue'
-import LabelRegisterLoginComponent from '@/components/LabelRegisterLoginComponent.vue'
 
 export default {
   name: 'Register',
   data () {
     return {
       error: '',
+      email: '',
       username: '',
       password: '',
-      email: '',
       fontSi: '60',
       isVisible: false,
       passwordConfirm: '',
+      access: Strings.access,
+      pass: Strings.password,
       label: Strings.register,
       emailLabel: Strings.email,
-      pass: Strings.password,
-      access: Strings.access,
+      loginLabel: Strings.loginLabel,
       usernameLable: Strings.username,
+      accountExist: Strings.accountExist,
       passConfir: Strings.passwordConfirm,
       register: Strings.registerNewAccount,
       errors: Strings.errors.loginIncorrect,
-      classStyleBo: 'register-login-register-link',
       passwordLabel: Strings.forgotPassword,
-      passwordLabelLink: Strings.recoveryPassword,
-      accountExist: Strings.accountExist,
-      loginLabel: Strings.loginLabel
+      classStyleBo: 'register-login-register-link',
+      passwordLabelLink: Strings.recoveryPassword
     }
   },
   components: {
@@ -76,15 +78,43 @@ export default {
     LabelComponent,
     ContentComponent,
     LinkButtonComponent,
-    NotificationComponent,
-    LabelRegisterLoginComponent
+    NotificationComponent
+
   },
   computed: {
     isDisabled () {
       return ((this.username === '') || (this.email === '') || (this.password === '') || (this.passwordConfirm === ''))
     }
+  },
+  methods: {
+    submit () {
+      let user = {
+        email: this.email,
+        user: this.username,
+        pass: this.password,
+        confirmPass: this.passwordConfirm
+      }
+      axios.post(api.signup, user, { headers: { 'Content-Type': 'application/json' } }).then(response => {
+        if (response.status === 200) {
+          this.$notify({
+            title: 'Registro exitoso.',
+            type: 'success',
+            text: response.data.message
+          })
+          router.push({ name: 'login' })
+        }
+      }).catch(error => {
+        if (error.response) {
+          this.error = error.response.data.error
+          this.$notify({
+            title: 'Error durante el registro',
+            type: 'error',
+            text: this.error
+          })
+        }
+      })
+    }
   }
-
 }
 </script>
 

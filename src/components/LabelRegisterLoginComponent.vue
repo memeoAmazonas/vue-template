@@ -1,6 +1,6 @@
 <template>
   <div class="register-login">
-    <link-button-component :goToLink="'/'" :label="forgotPassword" :classStyle="classStyle" :fontSize="fontSize" />
+    <link-button-component :goToLink="'/restore-password'" :label="forgotPassword" :classStyle="classStyle" :fontSize="fontSize" />
     <div class="register-login-register">
       <div class="register-login-content">
       <label-component  :color="'#879fa3'" :label="newOnWay" :fontSize="fontSi" :textAling="'right'"/>
